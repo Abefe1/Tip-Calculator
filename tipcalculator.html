@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="tipcalculator.js" defer></script>
+    <link rel="stylesheet" href="tipcalculator.css">
+</head>
+<body>
+    <div class="head"><h1 style="color: blue;">TIP CALCULATOR</h1></div>
+    <div class="main">
+        <!-- div to accept input from user -->
+        <div class="box" id="in">
+            <form id="inf">
+                <p class="box1p">Choose Currency</p>
+                <select class="box1p" name="" id="select">
+                    <option selected disabled hidden id="cur">Currency</option>
+                    <option value="&#8358;">Naira</option>
+                    <option value="&#36;">Us Dollar</option>
+                    <option value="&#8364;">Euro</option>
+                    <option value="&#163;">Pound</option>
+                    <option value="&#165;">Japanese Yen</option>
+
+                </select>
+                <p class="box1p">Amount</p>
+                <input type="number" placeholder="Amount" id="amount">
+                <p class="box1p">Tip Percentage</p>
+                <input type="number" placeholder="%" id="percentage">
+                <p class="box1p" min="1">Total Number Of Worker</p>
+                <input type="number" min="1" placeholder="Number Of People" id="people">
+                <div id="buttonWrap">
+                    <button type="button" id="solve" >Calculate</button>
+                    <button id="refresh" onclick="rset()">Reset</button>
+                <!-- you can decide to refresh without function because any button with default "type"
+                will automatically reset the page/form, to try that, try the line below. you can decide to comment the
+                previous reset buttton and corresponding function-->
+                <!-- <button id="refresh">Reset</button> -->
+                </div>
+            </form>
+        </div>
+
+        <!-- div to display output by the computer -->
+        <div class="box" id="out">
+            <div class="out">
+                <p class="boxp">Service Amount:</p>
+                <p id="outAmount">0</p></div>
+            <div class="out">
+                <p class="boxp">Tip Amount:</p>
+                <p id="tamount">0</p></div>
+            <div class="out">
+                <p class="boxp">Total Amount To Pay:</p>
+                <p id="total">0</p> </div>
+            <div class="out">
+                <p class="boxp">Tip per person:</p>
+                <p id="per">0</p></div>
+        </div>
+    </div>
+</body>
+</html>
